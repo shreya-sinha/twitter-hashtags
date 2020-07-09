@@ -3,6 +3,9 @@ package twitterhashtags.cli;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Stores all command options that can be given from the cli on program execution.
+ */
 public enum Commands {
 
     EVALUATE("$eval", " to evaluate most frequent tags"),

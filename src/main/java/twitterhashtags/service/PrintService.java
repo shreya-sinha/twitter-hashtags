@@ -7,8 +7,14 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Utility class for printing to console.
+ */
 public class PrintService {
 
+    /**
+     * Guide to navigate through the program.
+     */
     public void printManual() {
         System.out.println("=====================================================");
         System.out.println("Keep writing tweets, each on a separate line.");
@@ -19,6 +25,10 @@ public class PrintService {
         System.out.println("=====================================================");
     }
 
+    /**
+     * Print the output of trending tags with rank and count.
+     * @param sortedTags
+     */
     public void tagsWithCount(LinkedHashMap<String, Integer> sortedTags) {
         int i=1;
         for (Map.Entry<String, Integer> tag: sortedTags.entrySet()) {
@@ -27,6 +37,10 @@ public class PrintService {
         printManual();
     }
 
+    /**
+     * Print all tweets. Prints array of tags in the tweet, "NO TAGS" if there are none.
+     * @param allTweets
+     */
     public void allTweets(List<Tweet> allTweets) {
         for (Tweet tweet: allTweets) {
             System.out.println(tweet.getText());
